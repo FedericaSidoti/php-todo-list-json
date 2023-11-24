@@ -8,10 +8,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1> la Lista</h1>
-    </header>
-    <input type='text' placeholder='Aggiungi task'>
-    <button type='submit'> Aggiungi </button>
+    <div id='app'>
+        <header>
+            <h1> la Lista</h1>
+        </header>
+        <input type='text' placeholder='Aggiungi task' v-model='newTask'>
+        <button type='submit'> Aggiungi </button>
+    </div>
 </body>
 </html>
