@@ -8,7 +8,11 @@ createApp({
 		}
 	},
     methods : {
-        
-    }
+        consoleLog() {
+            console.log(this.newTask)
+        }
+    },
+    created(){}
+
 }
 ).mount('#app')

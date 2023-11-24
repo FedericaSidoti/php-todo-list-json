@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div id='app'>
+    <div id="app">
         <header>
             <h1> la Lista</h1>
+            <p>{{newTask}}</p>
         </header>
-        <input type='text' placeholder='Aggiungi task' v-model='newTask'>
-        <button type='submit'> Aggiungi </button>
+        <input type='text' placeholder='Aggiungi task' v-model="newTask">
+        <button type='submit' @click="consoleLog"> Aggiungi </button>
     </div>
 </body>
 </html>
