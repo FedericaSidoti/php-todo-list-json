@@ -12,7 +12,7 @@ createApp({
 			axios.get('server.php').then((res) => {
 				// console.log(res.data.results)
                 this.tasks = res.data.results
-                console.log(this.tasks)
+                // console.log(this.tasks)
 			})
         },
         saveTasks() {
@@ -22,7 +22,18 @@ createApp({
                     done: false
                 }
 			}
-            console.log(data);
+            // console.log(data);
+            axios
+				.post('store.php', data, {
+					headers: {
+						'Content-Type': 'multipart/form-data',
+					},
+				})
+				.then((res) => {
+					this.tasks = res.data.tasks
+                    console.log(res.data.tasks)
+					this.newTask = ''
+				})
         }
     },
     created(){
