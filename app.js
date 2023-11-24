@@ -8,12 +8,26 @@ createApp({
 		}
 	},
     methods : {
-        consoleLog() {
-            console.log(this.newTask)
+        fetchData() {
+			axios.get('server.php').then((res) => {
+				// console.log(res.data.results)
+                this.tasks = res.data.results
+                console.log(this.tasks)
+			})
+        },
+        saveTasks() {
+            const data = {
+				task: {
+                    text: this.newTask,
+                    done: false
+                }
+			}
+            console.log(data);
         }
     },
-    mounted(){
-        console.log('ciao')
+    created(){
+        console.log('ciao'),
+        this.fetchData()
     }
 
 }
