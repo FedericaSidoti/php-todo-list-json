@@ -12,7 +12,9 @@ createApp({
             console.log(this.newTask)
         }
     },
-    created(){}
+    mounted(){
+        console.log('ciao')
+    }
 
 }
 ).mount('#app')

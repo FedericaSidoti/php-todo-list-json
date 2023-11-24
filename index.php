@@ -15,10 +15,10 @@
     <div id="app">
         <header>
             <h1> la Lista</h1>
-            <p>{{newTask}}</p>
         </header>
         <input type='text' placeholder='Aggiungi task' v-model="newTask">
         <button type='submit' @click="consoleLog"> Aggiungi </button>
     </div>
+    <script src="./app.js"> </script>
 </body>
 </html>
