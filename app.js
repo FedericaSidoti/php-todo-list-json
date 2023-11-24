@@ -17,10 +17,7 @@ createApp({
         },
         saveTasks() {
             const data = {
-				task: {
-                    text: this.newTask,
-                    done: false
-                }
+				task: this.newTask
 			}
             // console.log(data);
             axios
@@ -31,7 +28,7 @@ createApp({
 				})
 				.then((res) => {
 					this.tasks = res.data.tasks
-                    console.log(res.data.tasks)
+                    console.log(res.data)
 					this.newTask = ''
 				})
         }
