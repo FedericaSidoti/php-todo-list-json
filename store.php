@@ -17,11 +17,11 @@ $response = [
 
 
     $tasks[] = $new_task;
-  
+
     $response['tasks'] = $tasks;
-  
+
     $tasks_string = json_encode($tasks);
     file_put_contents('./todos.json', $tasks_string);
 
-  header('Content-type: application/json'); 
-  echo json_encode($response);
+    header('Content-type: application/json'); 
+    echo json_encode($response);

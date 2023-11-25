@@ -1,0 +1,17 @@
+body {
+    background-color: #396eb9;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #1c3860;
+    color: white; 
+}
+
+.form-section, .list-section {
+    padding: 20px; 
+}
+
+.original-btn {
+    cursor: pointer
+}
