@@ -13,24 +13,14 @@ createApp({
 				deleteindex: index
 			}
             console.log('eliminato', index)
-			axios
-			.post('store.php', data,{
-				headers: {
-					'Content-Type': 'multipart/form-data',
-				},
-			})
-			
-			// const deleteIndex= index; 
-            // axios
-			// .post('store.php', deleteIndex, {
+			// axios
+			// .post('store.php', data,{
 			// 	headers: {
 			// 		'Content-Type': 'multipart/form-data',
 			// 	},
 			// })
-			// .then((res) => {
-				
-			// 	console.log(res.index)
-		// })
+			
+			
         },
         fetchData() {
 			axios.get('server.php').then((res) => {

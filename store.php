@@ -6,7 +6,7 @@ $new_task = [
     "done" => false
 ];
 
-$index_delete = $_POST['deleteindex'] ?? '';
+// $index_delete = $_POST['deleteindex'] ?? '';
 
 
 $response = [
