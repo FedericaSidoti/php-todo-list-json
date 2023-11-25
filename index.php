@@ -24,7 +24,7 @@
         </header>
         <main>
         <section class="form-section">
-        <div class="container">
+            <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center">
                     <input type='text' placeholder='Aggiungi task' v-model="newTask">
@@ -45,7 +45,9 @@
                             <tbody>
                                 <tr v-for="(task, i) in tasks" :key="i">
                                     <td>{{ task.text}}</td>
-                                    <td class="text-center original-btn">&#10005;</td>
+                                    <td class="text-center original-btn">
+                                        <button @click="deleteTask(i)">&#10005;</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
