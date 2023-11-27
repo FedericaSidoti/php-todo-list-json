@@ -40,7 +40,6 @@ createApp({
         }, 
 		deleteTask(index){
 			
-
 			const data= {
 				ind: index
 			}

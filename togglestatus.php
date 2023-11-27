@@ -1,17 +1,17 @@
 <?php
 
-$index_delete = $_POST['ind'] ?? '';
+$index_toggle = $_POST['ind'] ?? '';
 
 $response = [
     'success' => true,
 ];
-    if ($index_delete || $index_delete=== '0') {
+    if ($index_delete) {
     $tasks_string = file_get_contents('./todos.json');
 
     $tasks = json_decode($tasks_string, true);
         // var_dump($tasks);
 
-    array_splice($tasks, $index_delete, 1);
+    $currentTask= $tasks[$index_toggle];
 
     $response['tasks'] = $tasks;
 
