@@ -52,11 +52,8 @@ createApp({
             })
             .then((res) => {
                 console.log('eliminato', index);
-
-            // this.tasks = res.data.tasks;
+                this.tasks = res.data.tasks;
             })
-			
-			
         },
     },
     created(){

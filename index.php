@@ -44,9 +44,9 @@
                             </thead>
                             <tbody>
                                 <tr v-for="(task, i) in tasks" :key="i">
-                                    <td>{{ task.text}}</td>
+                                    <td :class="task.done === 'true' ? 'done text-success' : 'text-primary' ">{{ task.text}}</td>
                                     <td class="text-center original-btn">
-                                        <button @click="deleteTask(i)">&#10005;</button>
+                                        <button class="text-danger" @click="deleteTask(i)">&#10005;</button>
                                     </td>
                                 </tr>
                             </tbody>
