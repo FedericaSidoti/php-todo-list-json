@@ -1,24 +1,18 @@
 <?php
 
-$new_task_text = $_POST['task'] ?? '';
-$new_task = [
-    "text" => $new_task_text,
-    "done" => false
-];
-
-
+$index_delete = $_POST['ind'] ?? '';
 
 $response = [
     'success' => true,
 ];
-    if ($new_task) {
+    if ($index_delete) {
     $tasks_string = file_get_contents('./todos.json');
 
     $tasks = json_decode($tasks_string, true);
         // var_dump($tasks);
 
 
-    $tasks[] = $new_task;
+    array_splice($tasks, $index_delete, 1);
 
     $response['tasks'] = $tasks;
 

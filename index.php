@@ -27,8 +27,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center align-items-center">
-                    <input type='text' placeholder='Aggiungi task' v-model="newTask">
-                    <button type='submit' @click="saveTasks"> Aggiungi </button>
+                        <input type='text' placeholder='Aggiungi task' v-model="newTask">
+                        <button type='submit' @click="saveTasks"> Aggiungi </button>
                     </div>
                 </div>
             </div>
